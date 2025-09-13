@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    @apply bg-white text-neutral-900 antialiased font-sans min-h-screen;
+  }
+}
+
+/* Simple reveal utility */
+[data-reveal] { opacity: 0; transform: translateY(12px); }
+[data-reveal].is-visible { opacity: 1; transform: translateY(0); transition: opacity .6s ease, transform .6s ease; }
